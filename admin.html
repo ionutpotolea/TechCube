@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCube - Admin</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/19.1.1/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="toast/toast.css">
+</head>
+
+<body>
+    <header>
+        <div class="navContainer container">
+            <a href="index.html" class="siteLogo"><img src="img/TechCube.svg"></a>
+            <nav></nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="productManagement">
+            <div>
+                <h3>Gestionare produse</h3>
+                <button class="primary" id="addNew"><i class="fas fa-plus"></i>Adaugă produs nou</button>
+            </div>
+            <div id="productsWrapper">
+                <table id="productsTable">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                </table>
+
+            </div>
+        </section>
+
+        <section id="formSection" style="display: none;">
+            <form>
+                <div>
+                    <h3>Adăugare produs</h3>
+                    <button type="submit" class="primary"><i class="fas fa-plus"></i>Salvează</button>
+                    <button type="button" class="light" id="cancelForm">Anulează</button>
+                </div>
+                <div id=inputArea>
+                    <div class="form-control">
+                        <label for="formProductImage">Imagine</label>
+                        <div>
+                            <input type="text" id="formProductImage">
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="formProductName">Nume</label>
+                        <div>
+                            <input type="text" id="formProductName">
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="formProductPrice">Pret</label>
+                        <div>
+                            <input type="text" id="formProductPrice">
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="formProductQuantity">Stoc</label>
+                        <div>
+                            <input type="text" id="formProductQuantity">
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="formProductFeatures">Caracteristici</label>
+                        <div>
+                            <textarea id="formProductFeatures" rows="3"></textarea>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="formProductDescription">Descriere</label>
+                        <div>
+                            <textarea id="formProductDescription" rows="3"></textarea>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Eroare</small>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div class="toast">Sample toast message.</div>
+    
+    <div class="loader">
+        <img src="img/loading.svg" alt="Loading...">
+    </div>
+    
+    <script src="toast/toast.js"></script>
+    <script src="models.js"></script>
+    <script src="admin-views.js"></script>
+    
+</body>
+
+</html>

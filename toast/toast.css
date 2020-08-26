@@ -1,0 +1,75 @@
+.toast {
+    position: fixed;
+    z-index: 1;
+    top: -10ch;
+    right: 5ch;
+    max-width: 40ch;
+    height: auto;
+    background: #fff;
+    color: #333;
+    font-family: inherit;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.2s, top 0.2s;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.toast--visible{
+    top: 5.8ch;
+    opacity: 1;
+    transition: opacity 0.2s, top 0.2s;
+}
+
+.toast a{
+    font-weight: 600;
+    color: #000;
+}
+
+.toast a:hover{
+    color: rgb(0, 102, 170);
+    text-decoration: none;
+}
+
+.modal-close-button{
+    padding: 8px 10px 0px 0;
+    align-self: flex-start;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.toast div{
+    padding: 16px 12px;
+    display: grid;
+    place-items: center;
+}
+
+.toast.toast--success div{
+    background: green;
+}
+
+.toast.toast--error div{
+    background: #e96d00;
+}
+
+.toast div i{
+    position: static;
+    font-size: 1.3em;
+    max-height: 100%;
+    color: #fff;
+    margin: 0;
+}
+
+.toast span{
+    align-self: center;
+    padding: 16px 12px;
+}

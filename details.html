@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCube</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="toast/toast.css">
+</head>
+<body>
+    <header>
+        <div class="navContainer container">
+            <a href="index.html" class="siteLogo"><img src="img/TechCube.svg"></a>
+            <nav>
+                <ul>
+                    <li id="cartBtn">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span></span>
+                            <span>Coș cumpărături</span>
+                        </a>
+                    </li>
+                    <li><a href="admin.html"><i class="fas fa-lock"></i>Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="productDetailsWrapper" class="container">
+
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-header">
+            <div class="modal-title">Setare alertă stoc</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Atunci când produsul va reveni în stoc, te vom anunța prin email.
+            <form id="modalForm">
+                <input type="text" name="modalEmail" id="modalEmail" placeholder="Introduceți adresa de email...">
+                <button type="submit" class="sendEmail">Trimite</button>
+            </form>
+            <small class="invisible">Error</small>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <div class="loader">
+        <img src="img/loading.svg" alt="Loading...">
+    </div>
+    
+    <script src="models.js"></script>
+    <script src="toast/toast.js"></script>
+    <script src="details-views.js"></script>
+</body>
+</html>

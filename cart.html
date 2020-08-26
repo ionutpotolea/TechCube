@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCube - Coș cumpărături</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="toast/toast.css">
+</head>
+<body>
+    <header>
+        <div class="navContainer container">
+            <a href="index.html" class="siteLogo"><img src="img/TechCube.svg"></a>
+            <nav>
+                <ul>
+                    <li id="cartBtn">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span></span>
+                            <span>Coș cumpărături</span>
+                        </a>
+                    </li>
+                    <li><a href="admin.html"><i class="fas fa-lock"></i>Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="shoppingCart">
+            <div>
+                <h3></h3>
+            </div>
+            <div id="cartWrapper" class="row">
+                <table id="cartTable" class="col-sm-12 col-md-9">
+                    <thead>
+
+                    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                </table>
+                <div id="totalAmount" class="col-sm-12 col-md-3">
+                    
+                </div>
+            </div>
+            <div id="emptyCartWrapper">
+                <span></span>
+            </div>
+            <div id="cartErrorMsg"></div>    
+        </section>
+    </main>
+    
+    <div class="loader">
+        <img src="img/loading.svg" alt="Loading...">
+    </div>
+    
+    <script src="models.js"></script>
+    <script src="toast/toast.js"></script>
+    <script src="cart-views.js"></script>
+</body>
+</html>
